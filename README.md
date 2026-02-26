@@ -1,4 +1,4 @@
-# Exploration of Approaches to Counter Hate Speech: The Case of Sexist Speech
+# Beyond Generic Responses: Target-Aware Strategies for Countering Hate Speech
 
 Exploring methods for generating counter-speech against online sexism and hate-speech. 
 
