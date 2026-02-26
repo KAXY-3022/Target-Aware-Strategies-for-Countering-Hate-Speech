@@ -4,7 +4,7 @@ Exploring methods for generating counter-speech against online sexism and hate-s
 
 ## Introduction
 
-This repo is the code implementation for "[Exploration of Approaches to Counter Hate Speech: The Case of Sexist Speech](https://something)".
+This repo is the code implementation for "[Beyond Generic Responses: Target-Aware Strategies for Countering Hate Speech (LREC 2026)](https://something)".
 
 This project focuses on exploring methods for **automated counter-speech generation**, which is, for a given hate-speech, to generate a countering response intending to combat the harmful messages, is non-toxic and grammatically acceptable.
 
