@@ -21,7 +21,6 @@ from transformers import (
     Seq2SeqTrainer
 )
 from transformers import TrainerCallback
-from accelerate import infer_auto_device_map
 
 from lm_against_hate.config.config import optuna_hp_space, categories, device
 from lm_against_hate.utilities.hyperparameter_tuning import hyper_param_search
@@ -43,12 +42,6 @@ def main(
     """
     Train a language model with various optimizations.
     """
-    torch.cuda.empty_cache()   
-    device_map = infer_auto_device_map(
-        model, max_memory={"cpu": "30GB", device: "12GB"}) if device == 'cuda:0' else device
-    
-    print_gpu_utilization()
-
     # Load Model Parameters
     print(f'Loading model parameters for: {modeltype} {modelname}')
     params = model_selection(model_type=modeltype, model_name=modelname)
@@ -67,6 +60,9 @@ def main(
     
     # Load pre-trained model with optimizations
     print('Loading base model: ', params['model_name'])
+    torch.cuda.empty_cache()
+    device_map = "auto" if device.type == "cuda" else device.type
+
     model, tokenizer = load_model(
         model_type=modeltype,
         params=params,
@@ -75,7 +71,7 @@ def main(
         use_flash_attention=use_flash_attention,
         device_map=device_map
     )
-    
+    print_gpu_utilization()
     
     if use_peft:
         model.config.use_cache = False
