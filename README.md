@@ -279,7 +279,6 @@ If you intend to productionize the project, good next steps would be:
 - CONAN: [COunter NArratives through Nichesourcing](https://github.com/marcoguerini/CONAN)
 - CrowdCounter: [CrowdCounter benchmark](https://github.com/hate-alert/crowdcounter)
 - EDOS: [Explainable Detection of Online Sexism (EDOS)](https://github.com/rewire-online/edos)
-Related prior systems mentioned in the original repository README:
 
 - [Generate, Prune, Select: A Pipeline for Counterspeech Generation against Online Hate Speech](https://github.com/WanzhengZhu/GPS)
 - [CounterGeDi: A controllable approach to generate polite, detoxified and emotional counterspeech](https://github.com/hate-alert/CounterGEDI)
