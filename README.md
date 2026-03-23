@@ -7,6 +7,8 @@ Code for training, running, and evaluating **target-aware counterspeech generati
 - scoring generations with automated metrics and classifiers,
 - training auxiliary topic / counterspeech classifiers.
 
+This repo is the code implementation for "[Beyond Generic Responses: Target-Aware Strategies for Countering Hate Speech (LREC 2026)](https://something)".
+
 ## What this repository contains
 
 The Python package lives under `src/lm_against_hate/` and is organized into a few main areas:
