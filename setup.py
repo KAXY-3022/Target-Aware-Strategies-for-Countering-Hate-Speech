@@ -1,5 +1,6 @@
+from pathlib import Path
+
 from setuptools import setup, find_packages
-import os
 
 def read_requirements():
     """Read requirements file and handle different encodings."""
@@ -19,6 +20,8 @@ def read_requirements():
     return []
 
 requirements = read_requirements()
+readme_path = Path("README.md")
+long_description = readme_path.read_text(encoding="utf-8") if readme_path.exists() else ""
 
 setup(
     name="lm_against_hate",
@@ -28,8 +31,8 @@ setup(
     install_requires=requirements,
     author="YenYu Chang",
     author_email="yenyu.chang@hotmail.com",
-    description="A package for detecting and analyzing hate speech using language models",
-    long_description="",  # Temporarily removed README reading
+    description="Training and evaluation utilities for target-aware counterspeech generation",
+    long_description=long_description,
     long_description_content_type="text/markdown",
     python_requires=">=3.9",
 )

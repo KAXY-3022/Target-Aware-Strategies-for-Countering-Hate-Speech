@@ -148,7 +148,7 @@ class S2SDataLoader(Dataloader):
     def _prepare_input(self, **kwargs):
         if self.include_category:
             def construct_text(row):
-                row['text'] = f'{row['Target']} {row['Hate_Speech']}'
+                row['text'] = f"{row['Target']} {row['Hate_Speech']}"
                 return row
         else:
             def construct_text(row):
@@ -246,7 +246,7 @@ class CTDataLoader(Dataloader):
     def _prepare_input(self):
         if self.include_category:
             def construct_text(row):
-                row['text'] = f'{row['Target']} {row['Hate_Speech']}'
+                row['text'] = f"{row['Target']} {row['Hate_Speech']}"
                 return row
         else:
             def construct_text(row):
